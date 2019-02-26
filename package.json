@@ -1,5 +1,5 @@
 {
-  "name": "@toast-ui/vue-calendar",
+  "name": "prueba_calendar",
   "version": "1.0.2",
   "description": "TOAST UI Calendar for Vue",
   "main": "dist/toastui-vue-calendar.js",
@@ -41,6 +41,7 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
+    "@toast-ui/vue-calendar": "^1.0.3",
     "tui-calendar": "^1.7.0"
   }
 }

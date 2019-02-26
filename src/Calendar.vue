@@ -175,8 +175,16 @@ export default {
             scheduleView: this.scheduleView,
             theme: this.theme,
             template: this.template,
-            week: this.week,
-            month: this.month,
+            week: {
+                daynames: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+                startDayOfWeek: 1,
+                narrowWeekend: true
+            },
+            month: {
+                daynames: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
+                startDayOfWeek: 1,
+                narrowWeekend: true
+            },
             calendars: this.calendars,
             useCreationPopup: this.useCreationPopup,
             useDetailPopup: this.useDetailPopup,

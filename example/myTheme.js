@@ -16,7 +16,7 @@ export default {
     'month.dayname.paddingLeft': '0',
     'month.dayname.paddingRight': '0',
     'month.dayname.fontSize': '13px',
-    'month.dayname.backgroundColor': 'inherit',
+    'month.dayname.backgroundColor': 'orange',
     'month.dayname.fontWeight': 'normal',
     'month.dayname.textAlign': 'center',
 
