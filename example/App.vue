@@ -182,7 +182,7 @@ export default {
             this.setRenderRangeText();
         }
     },
-    methods: {
+    methods: {//Implementar metodo para guardar los datos
         init() {
             this.setRenderRangeText();
         },
@@ -240,6 +240,19 @@ export default {
             console.group('onClickDayname');
             console.log(res.date);
             console.groupEnd();
+            //Implementacion
+            scheduleList.push(
+                {
+                    id: '1',
+                    calendarId: '0',
+                    title: 'Prueba',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                }
+            );
+            
         },
         onBeforeDeleteSchedule(res) {
             console.group('onBeforeDeleteSchedule');

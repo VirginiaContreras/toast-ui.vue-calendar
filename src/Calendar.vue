@@ -4,6 +4,12 @@
 </template>
 <script>
 import Calendar from 'tui-calendar';
+// calendar.on('clickDayname', function(event) {
+//     if (calendar.getViewName() === 'week') {
+//         calendar.setDate(new Date(event.date));
+//         calendar.changeView('day', true);
+//     }
+// });
 
 const calendarEvents = [
     'afterRenderSchedule',
@@ -34,7 +40,7 @@ export default {
             default() {
                 return [];
             },
-            validator(value) {
+            validator(value) {// Valida si los horarios existen
                 let notHave = false;
                 value.forEach(schedule => {
                     notHave = scheduleNeedProp.some(prop => !schedule.hasOwnProperty(prop));
@@ -176,8 +182,8 @@ export default {
             theme: this.theme,
             template: this.template,
             week: {
-                daynames: ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab'],
-                startDayOfWeek: 1,
+                daynames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                startDayOfWeek: 1,//Propiedad que indica con que día empieza la semana
                 narrowWeekend: true
             },
             month: {
@@ -185,6 +191,29 @@ export default {
                 startDayOfWeek: 1,
                 narrowWeekend: true
             },
+            template: {
+            milestone: function(schedule) {
+                return '<span style="color:red;"><i class="fa fa-flag"></i> ' + schedule.title + '</span>';
+            },
+            milestoneTitle: function() {
+                return 'Milestone';
+            },
+            task: function(schedule) {
+                return '&nbsp;&nbsp;#' + schedule.title;
+            },
+            taskTitle: function() {
+                return '<label><input type="checkbox" />Task</label>';
+            },
+            allday: function(schedule) {
+                return schedule.title + ' <i class="fa fa-refresh"></i>';
+            },
+            alldayTitle: function() {
+                return 'All Day';
+            },
+            time: function(schedule) {
+                return schedule.title + ' <i class="fa fa-refresh"></i>' + schedule.start;
+            }
+        },
             calendars: this.calendars,
             useCreationPopup: this.useCreationPopup,
             useDetailPopup: this.useDetailPopup,
@@ -210,20 +239,20 @@ export default {
         },
         reflectSchedules() {
             if (this.schedules.length > 0) {
-                this.invoke('createSchedules', this.schedules);
+                this.invoke('createSchedules', this.schedules);//Invoca la creacion de un calendario si existe
             }
         },
         getRootElement() {
             return this.$refs.tuiCalendar;
         },
-        invoke(methodName, ...args) {
+        invoke(methodName, ...args) {// Funcion que invoca la creacion de un calendario
             let result;
             if (this.calendarInstance[methodName]) {
                 result = this.calendarInstance[methodName](...args);
             }
 
             return result;
-        }
+        },
     }
 };
 </script>
