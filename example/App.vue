@@ -32,6 +32,7 @@
               @clickSchedule="onClickSchedule"
               @clickDayname="onClickDayname"
               @beforeDeleteSchedule="onBeforeDeleteSchedule"
+              @beforeCreateSchedule="onBeforeCreateSchedule"
               @afterRenderSchedule="onAfterRenderSchedule"
               @clickTimezonesCollapseBtn="onClickTimezonesCollapseBtn"
     />
@@ -102,7 +103,7 @@ export default {
                 {
                     id: '1',
                     calendarId: '0',
-                    title: 'TOAST UI Calendar Study',
+                    title: 'TOAST UI Calendar Studyfgd',
                     category: 'time',
                     dueDateClass: '',
                     start: today.toISOString(),
@@ -138,6 +139,7 @@ export default {
                     end: getDate('hours', today, 1, '+').toISOString()
                 }
             ],
+            //columnas de zona horario en la vista weekly
             timezones: [{
                 timezoneOffset: 540,
                 displayLabel: 'GMT+09:00',
@@ -146,6 +148,10 @@ export default {
                 timezoneOffset: -420,
                 displayLabel: 'GMT-08:00',
                 tooltip: 'Los Angeles'
+            }, {
+                timezoneOffset: 540,
+                displayLabel: 'GMT-05:00',
+                tooltip: 'Lima'
             }],
             theme: myTheme,
             template: {
@@ -228,6 +234,7 @@ export default {
                 this.setRenderRangeText();
             }
         },
+        //Clic en un horario existente
         onClickSchedule(res) {
             console.group('onClickSchedule');
             console.log('MouseEvent : ', res.event);
@@ -235,24 +242,12 @@ export default {
             console.log('Schedule Info : ', res.schedule);
             console.groupEnd();
         },
+        //clic en el nombre del día en la cabecera de semana
         onClickDayname(res) {
             // view : week, day
             console.group('onClickDayname');
             console.log(res.date);
             console.groupEnd();
-            //Implementacion
-            scheduleList.push(
-                {
-                    id: '1',
-                    calendarId: '0',
-                    title: 'Prueba',
-                    category: 'time',
-                    dueDateClass: '',
-                    start: today.toISOString(),
-                    end: getDate('hours', today, 3, '+').toISOString()
-                }
-            );
-            
         },
         onBeforeDeleteSchedule(res) {
             console.group('onBeforeDeleteSchedule');
@@ -266,6 +261,29 @@ export default {
             console.group('onAfterRenderSchedule');
             console.log('Schedule Info : ', res.schedule);
             console.groupEnd();
+        },
+        onBeforeCreateSchedule(schedule) {
+            console.log(schedule);
+
+            let category = 'time';
+
+            if( schedule.isAllDay === true ) {
+                category = 'allday';
+            }
+
+            //Implementacion
+            this.scheduleList.push(
+                {
+                    id: '5',
+                    calendarId: schedule.calendarId,
+                    title: schedule.title,
+                    location: schedule.location,
+                    //state: schedule.state, //no guarda
+                    category: category, //time - allday
+                    start: schedule.start,
+                    end: schedule.end
+                }
+            );
         },
         onClickTimezonesCollapseBtn(timezonesCollapsed) {
             // view : week, day
