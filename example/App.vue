@@ -33,6 +33,7 @@
               @clickDayname="onClickDayname"
               @beforeDeleteSchedule="onBeforeDeleteSchedule"
               @beforeCreateSchedule="onBeforeCreateSchedule"
+              @beforeUpdateSchedule="onBeforeUpdateSchedule"
               @afterRenderSchedule="onAfterRenderSchedule"
               @clickTimezonesCollapseBtn="onClickTimezonesCollapseBtn"
     />
@@ -84,7 +85,7 @@ export default {
                 }
             ],
             dateRange: '',
-            selectedView: 'month',
+            selectedView: 'week',
             calendarList: [
                 {
                     id: '0',
@@ -112,7 +113,7 @@ export default {
                 {
                     id: '2',
                     calendarId: '1',
-                    title: 'Practice',
+                    title: 'hOLAA',
                     category: 'milestone',
                     dueDateClass: '',
                     start: getDate('date', today, 1, '+').toISOString(),
@@ -122,7 +123,7 @@ export default {
                 {
                     id: '3',
                     calendarId: '1',
-                    title: 'FE Workshop',
+                    title: 'FE Bueno',
                     category: 'allday',
                     dueDateClass: '',
                     start: getDate('date', today, 2, '-').toISOString(),
@@ -284,6 +285,25 @@ export default {
                     end: schedule.end
                 }
             );
+        },
+        onBeforeUpdateSchedule(event) {
+            console.log(event+'update');
+            let schedule = event.schedule;
+            let startTime = event.start;
+            let endTime = event.end;
+             this.$refs.tuiCal.invoke('updateSchedule', schedule.id, schedule.calendarId, {
+                start: startTime,
+                end: endTime
+             });
+               
+            // let schedule = event.schedule;
+            // let startTime = event.start;
+            // let endTime = event.end;
+
+            // updateSchedule(schedule.id, schedule.calendarId, {
+            //     start: startTime,
+            //     end: endTime
+            // });
         },
         onClickTimezonesCollapseBtn(timezonesCollapsed) {
             // view : week, day

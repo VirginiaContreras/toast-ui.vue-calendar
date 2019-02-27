@@ -4,13 +4,6 @@
 </template>
 <script>
 import Calendar from 'tui-calendar';
-// calendar.on('clickDayname', function(event) {
-//     if (calendar.getViewName() === 'week') {
-//         calendar.setDate(new Date(event.date));
-//         calendar.changeView('day', true);
-//     }
-// });
-
 const calendarEvents = [
     'afterRenderSchedule',
     'beforeCreateSchedule',
