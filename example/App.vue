@@ -104,14 +104,104 @@ export default {
                 {
                     id: '1',
                     calendarId: '0',
-                    title: 'TOAST UI Calendar Studyfgd',
-                    category: 'time',
+                    title: 'AMERICA NOTICIAS: PRIMERA EDICION: LOCAL (GP)',
+                    category: 'allday',
                     dueDateClass: '',
                     start: today.toISOString(),
                     end: getDate('hours', today, 3, '+').toISOString()
                 },
                 {
                     id: '2',
+                    calendarId: '0',
+                    title: 'AMERICA NOTICIAS: PRIMERA EDICION (GP)',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '3',
+                    calendarId: '0',
+                    title: 'AMERICA DEPORTES (G)',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '4',
+                    calendarId: '0',
+                    title: 'AMERICA NOTICIAS: PRIMERA EDICION (GP)',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '5',
+                    calendarId: '0',
+                    title: 'TN. EL PRIVILEGIO DE AMAR (GP)',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '6',
+                    calendarId: '0',
+                    title: 'TN. MARIA MERCEDES (GP)',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '7',
+                    calendarId: '0',
+                    title: 'AMERICA NOTICIAS: EDICION DEL MEDIODIA (GP)',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '8',
+                    calendarId: '0',
+                    title: 'EN BOCA DE TODOS (GP)',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '9',
+                    calendarId: '0',
+                    title: 'AL FONDO HAY SITIO   (5° TEMPORADA) (G)',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '10',
+                    calendarId: '0',
+                    title: 'TN. CAER EN TENTACION (GP)',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '11',
+                    calendarId: '0',
+                    title: 'LA ROSA DE GUADALUPE',
+                    category: 'allday',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 3, '+').toISOString()
+                },
+                {
+                    id: '5',
                     calendarId: '1',
                     title: 'hOLAA',
                     category: 'milestone',
@@ -121,24 +211,114 @@ export default {
                     isReadOnly: true
                 },
                 {
-                    id: '3',
+                    id: '6',
                     calendarId: '1',
-                    title: 'FE Bueno',
-                    category: 'allday',
+                    title: 'AMERICA ESPECTACULOS (REPETICION)',
+                    category: 'time',
                     dueDateClass: '',
-                    start: getDate('date', today, 2, '-').toISOString(),
-                    end: getDate('date', today, 1, '-').toISOString(),
-                    isReadOnly: true
+                    start: getDate('hours', today, 2, '-').toISOString(),
+                    end: getDate('hours', today, 1, '-').toISOString(),
+                    //isReadOnly: true
                 },
                 {
-                    id: '4',
+                    id: '7',
                     calendarId: '1',
-                    title: 'Report',
+                    title: 'AMERICA NOTICIAS (MATUTINO)',
                     category: 'time',
                     dueDateClass: '',
                     start: today.toISOString(),
                     end: getDate('hours', today, 1, '+').toISOString()
-                }
+                },
+                {
+                    id: '8',
+                    calendarId: '1',
+                    title: 'AMERICA NOTICIAS: EDICION DEL SABADO (GP)',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                },
+                {
+                    id: '9',
+                    calendarId: '1',
+                    title: 'ESTAS EN TODAS (5TA TEMPORADA)',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                },
+                {
+                    id: '10',
+                    calendarId: '1',
+                    title: 'CINESCAPE (G)',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                },
+                {
+                    id: '11',
+                    calendarId: '1',
+                    title: '(G) EL CHAVO DEL OCHO',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                },
+                {
+                    id: '12',
+                    calendarId: '1',
+                    title: 'AUTOMUNDO(G)',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                },
+                {
+                    id: '13',
+                    calendarId: '1',
+                    title: 'ESTAS EN TODAS (REPETICION)',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                },
+                {
+                    id: '14',
+                    calendarId: '1',
+                    title: 'AMERICA NOTICIAS: EDICION DOMINICAL (GP)',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                },
+                {
+                    id: '15',
+                    calendarId: '1',
+                    title: 'DOMINGO AL DIA (GP)',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                },                
+                {
+                    id: '16',
+                    calendarId: '1',
+                    title: 'TEC(G)',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                },
+                {
+                    id: '17',
+                    calendarId: '1',
+                    title: '(G) EL CHAVO DEL OCHO',
+                    category: 'time',
+                    dueDateClass: '',
+                    start: today.toISOString(),
+                    end: getDate('hours', today, 1, '+').toISOString()
+                }     
             ],
             //columnas de zona horario en la vista weekly
             timezones: [{
@@ -263,26 +443,26 @@ export default {
             console.log('Schedule Info : ', res.schedule);
             console.groupEnd();
         },
-        onBeforeCreateSchedule(schedule) {
-            console.log(schedule);
+        onBeforeCreateSchedule(e) {
+            console.log(e);
 
             let category = 'time';
 
-            if( schedule.isAllDay === true ) {
+            if( e.isAllDay === true ) {
                 category = 'allday';
             }
 
             //Implementacion
             this.scheduleList.push(
                 {
-                    id: '5',
-                    calendarId: schedule.calendarId,
-                    title: schedule.title,
-                    location: schedule.location,
-                    //state: schedule.state, //no guarda
+                    id: e.id,
+                    calendarId: e.calendarId,
+                    title: e.title,
+                    location: e.location,
+                    //state: e.state, //no guarda
                     category: category, //time - allday
-                    start: schedule.start,
-                    end: schedule.end
+                    start: e.start,
+                    end: e.end
                 }
             );
         },
